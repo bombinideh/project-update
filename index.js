@@ -1,14 +1,12 @@
 require("dotenv").config();
-const express = require("express");
-
-const app = express();
+const app = require("./app");
 const port = 3000;
 
 const updateRoute = require("./src/update");
 
 app.use(updateRoute);
 
-module.exports = { app, knex };
+module.exports = app;
 
 app.listen(port, () => {
   console.log(`🚀 Working on port ${port}`);

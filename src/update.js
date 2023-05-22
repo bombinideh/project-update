@@ -1,4 +1,4 @@
-const { app, knex } = require("../index");
+const app = require("../app.js");
 
 app.put("/update/:dst", async (req, res) => {
   const dst = req.params.dst;
